@@ -1,0 +1,39 @@
+Breakpoint 2, uk_syscall_do_exit_group (status=2) at /home/pratik/gsoc-26/catalog/filebrowser-unikraft/.unikraft/unikraft/lib/posix-process/exit.c:257
+257     UK_LLSYSCALL_R_DEFINE(int, exit_group, int, status)
+(gdb) bt
+#0  uk_syscall_do_exit_group (status=2) at /home/pratik/gsoc-26/catalog/filebrowser-unikraft/.unikraft/unikraft/lib/posix-process/exit.c:257
+#1  0x000000000013d9cc in uk_syscall6_do_e (execenv=execenv@entry=0x10000d3b80) at /home/pratik/gsoc-26/catalog/filebrowser-unikraft/.unikraft/build/libsyscall_shim/uk_syscall6_do.c:1223
+#2  0x000000000013e355 in ukplat_syscall_handler (usc=0x10000d3b80) at /home/pratik/gsoc-26/catalog/filebrowser-unikraft/.unikraft/unikraft/lib/syscall_shim/uk_syscall_binary.c:110
+#3  0x0000000000101097 in _ukplat_syscall () at /home/pratik/gsoc-26/catalog/filebrowser-unikraft/.unikraft/unikraft/plat/common/x86/syscall.S:264
+#4  0x00000010028e8aab in ?? ()
+#5  0x00000010028da6ba in ?? ()
+#6  0x000000c000000002 in ?? ()
+#7  0x000000c0001473d8 in ?? ()
+#8  0x00000010028e53a7 in ?? ()
+#9  0x00000010028e9e05 in ?? ()
+#10 0x0100001000158c48 in ?? ()
+#11 0x0000001000158c60 in ?? ()
+#12 0x0000001004b28860 in ?? ()
+#13 0x0000000000000005 in ?? ()
+#14 0x00000010028e52a5 in ?? ()
+#15 0x00000010028e5233 in ?? ()
+#16 0x0000001000000005 in ?? ()
+#17 0x0000001000158d98 in ?? ()
+#18 0x0000000001b2f2c0 in vfscore_einitrd_start ()
+#19 0x0000000000000005 in ?? ()
+#20 0x0000001000158d98 in ?? ()
+#21 0x0000001003347124 in ?? ()
+#22 0x0000000001b2f2c0 in vfscore_einitrd_start ()
+#23 0x00000010028e50e0 in ?? ()
+#24 0x0000000504b4aed0 in ?? ()
+--Type <RET> for more, q to quit, c to continue without paging--c
+#25 0x0000001000158d98 in ?? ()
+#26 0x0000001000158dc8 in ?? ()
+#27 0xb692a38930eb557a in ?? ()
+#28 0x0000001000158d98 in ?? ()
+#29 0x0000000000000002 in ?? ()
+#30 0x00000010041702e0 in ?? ()
+#31 0x0000000000000002 in ?? ()
+#32 0xb6b2a3a229c1557a in ?? ()
+#33 0xb6b2a5e1d15f557a in ?? ()
+#34 0x0000000000000000 in ?? ()
